@@ -113,8 +113,7 @@ class JdbcConfig {
                         }
 
                         if (connObject.containsKey("prepare_statement_support")) {
-                            connection.prepareStatementSupport = Boolean.parseBoolean(
-                                    (String) connObject.get("prepare_statement_support"));
+                            connection.prepareStatementSupport = (boolean) connObject.get("prepare_statement_support");
                         }
                     }
                 } else {
@@ -225,7 +224,6 @@ class JdbcConfig {
                                     final Connection conn;
                                     if (connection.username == null) {
                                         conn = DriverManager.getConnection(connection.url);
-
                                     } else {
                                         conn = DriverManager.getConnection(
                                                 connection.url, connection.username, connection.password);
