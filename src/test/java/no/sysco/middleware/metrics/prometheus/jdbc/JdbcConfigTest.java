@@ -31,7 +31,7 @@ public class JdbcConfigTest {
                 "jobs:\n" +
                 "- name: \"global\"\n" +
                 "drivers:\n" +
-                " - \"com.github.mmolimar.ksql.jdbc.KsqlDrivera\"" +
+                " - \"com.invalidclass\"" +
                 ""));
     }
 
