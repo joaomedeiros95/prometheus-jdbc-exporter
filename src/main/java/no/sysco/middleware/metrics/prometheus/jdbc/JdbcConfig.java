@@ -112,7 +112,7 @@ class JdbcConfig {
                                     "username");
                         }
 
-                        if (connObject.containsKey("no_prepare_statement_support")) {
+                        if (connObject.containsKey("prepare_statement_support")) {
                             connection.prepareStatementSupport = Boolean.parseBoolean(
                                     (String) connObject.get("prepare_statement_support"));
                         }
